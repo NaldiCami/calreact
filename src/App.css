@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meu-botao {
+  background-color: #007bff;
+  color: white;
+  padding: 10px ;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meu-botao:hover {
+  background-color: #0056b3;
+}
+
+.Corpo {
+  width: 30%;
+  height: 600px;
+  background-color: #b2c6dd;
+  margin-top: 100px;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column;
+  border-radius: 80px;
+}
+
+.Retorno{
+  margin-top: 50px;
+  width: 80%;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 20px;
+  color: white;
+}
+
+.Inputar{
+  margin-top: 30px;
+  width: 80%;
+  height: 60%;
+  display: inline-flex;
+  
+}
+
+.Operacoes{
+  width: 40%;
+  height: 100%;
+}
+
+.Botoes{
+  width: 60%;
+  height: 100%;
+}
+
+.Botao{
+  
+  margin: 5px;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: #e4eaf0;
+
+}
+
+.Botao2{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+  height: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: #cacfd4;
+
+}
+
+.Botao3{
+  margin: 5px;
+  width: 42%;
+  height: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: #cacfd4;
+
+}
+
+.Botao:hover{
+  background-color: rgb(185, 242, 221);
+  
+}
+
+.Botao2:hover{
+  background-color: rgb(185, 242, 221);
+  
+}
+
+.Botao3:hover{
+  background-color: rgb(185, 242, 221);
+  
+}
