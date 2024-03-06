@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { click } from '@testing-library/user-event/dist/click';
 
 
 function App() {
@@ -9,12 +8,12 @@ function App() {
 
 
 // botao numero
-  function numero(item) {
+  function numero(item) { // funcao que pega o numero e coloca no display
     setTextoDisplay(textoDisplay + item);
   }
 
 
-  function BotaoNumero({ item }) {
+  function BotaoNumero({ item }) { // funcao de cada botao de numero
     return (
       <button className='Botao' onClick={() => numero(item)}>{item}</button>
     );
@@ -23,19 +22,19 @@ function App() {
 
 
 // botao limpa
-  function BotaoLimpa({ item }) {
+  function BotaoLimpa({ item }) { // botao que limpa a calculadora
     return (
       <button className='Botao2' onClick={() => limpa(item)}>{item}</button>
     );
   }
 
-  function limpa(item) {
+  function limpa(item) { // funcao que limpa
     setTextoDisplay("");
   }
 
 // botao op
 
-  function BotaoOp({ item }) {
+  function BotaoOp({ item }) { // Esses sao os botoes das operacoes
     if (textoDisplay == ""){
       return (
         <button className='Botao3' onClick={() => numero("")}>{item}</button>
@@ -49,9 +48,8 @@ function App() {
     
   }
 
-// botao igual -- terminar aqui
 
-  function BotaoIg({ item }) {
+  function BotaoIg({ item }) { // esse é o botao de igual
     if(textoDisplay == ""){
       return (
         <button className='Botao2' onClick={() => numero("")}>{item}</button>
@@ -66,7 +64,7 @@ function App() {
 
 
 
-  function Resolucao() {
+  function Resolucao() { //essa é a funcao que reolve a conta
     try {
       // Use eval() para resolver a expressão no textoDisplay
       const resultado = eval(textoDisplay);
@@ -88,17 +86,17 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App"> {/* esse é o app */}
 
-        <div className='Corpo'>
+        <div className='Corpo'> {/* esse é o corpo da calculadora */}
 
-          <div className='Retorno'> 
+          <div className='Retorno'> {/* essa é a div do campo do display */}
             <h1>{textoDisplay}</h1>
           </div>
 
-          <div className='Inputar'>
+          <div className='Inputar'> {/* esse é o corpo da parte em que ficam os numetos e os botoes */}
             
-            <div className='Botoes'>
+            <div className='Botoes'> {/* parte dos numero */}
 
               <BotaoNumero item="1"></BotaoNumero>
               <BotaoNumero item="2"></BotaoNumero>
@@ -113,7 +111,7 @@ function App() {
 
             </div>
 
-            <div className='Operacoes'>
+            <div className='Operacoes'> {/* parte dos botoes*/}
               <BotaoOp item={'+'}></BotaoOp>
               <BotaoOp item={'-'}></BotaoOp>
               <BotaoOp item={'*'}></BotaoOp>
